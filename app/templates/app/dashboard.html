@@ -1,0 +1,108 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<h2 style="text-align:center;">{{ username }}S {{ title }}.</h2>
+
+<h3 style="text-align:center;">{{ message }}</h3>
+
+
+
+<table align="center">
+    <tr>
+        <td> select the desired stock list
+        <td>
+    </tr>
+    <tr>
+        <td style="text-align:center;">
+
+            <ul class="nav nav-tabs">
+                {{stock_list}}
+                <li> <a href="dashstock"> enter stock       </a></li>
+                <li> <a href="dashwatchlist">New Watch List </a></li>
+                <li> <a href="dashownlist"> New Owned List  </a></li>
+            </ul>
+        </td>
+    </tr>
+  
+
+    <tr>
+     
+        {% if form.errors %}
+        <p style="color: red;">{{ form.errors }}</p>
+        {% endif %}
+    </tr>
+
+
+</table>
+<table>
+
+    <tr style="width:100%;">
+        <td><h3>list of your lists</h3> </td>
+    </tr>
+    <tr style="width:100%;">
+        <td style="width:20%;">
+            List Name
+        </td>
+        <td style="width:20%;">
+            See List
+        </td>
+        <td style="width:20%;">
+            add stock to list
+        </td>
+        <td style="width:20%;">
+            Edit List
+        </td>
+        </td>
+        <td style="width:20%;">
+            Delete List
+        </td>
+    </tr>
+    <tr style="width:100%;">        <td style="width:20%;">
+            <!--show list names-->
+            {% for stock in showstock %}
+            <div style="text-align:center; color: {% if stock.2 %}blue{% else %}red{% endif %}">
+                <h3>{{ stock.1 }}</h3>
+            {% endfor %}
+            </div>
+        </td>
+        <td style="width:20%;">
+            {% for stock in showstock %}
+            <div><h3> <a href="{% if stock.2 %}/dashselectown/{{ stock.0 }}{% else %}/dashselwatchlist/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></h3</div>
+            {% endfor %}
+        </td>
+    <!--enter stock to list-->
+        <td style="width:20%;">
+            {% for stock in showstock %}
+            <div> <a href="{% if stock.2 %}/enterownstock/{{ stock.0 }}{% else %}/enterwatchstock/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></div>
+            {% endfor %}
+        </td>
+        <td style="width:20%;">
+            {% for stock in showstock %}
+            <div> <a href="{% if stock.2 %}/dashselectown/{{ stock.0 }}{% else %}/dashselwatchlist/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></div>
+            {% endfor %}
+        </td>
+        <td style="width:20%;">
+            {% for stock in showstock %}
+            <div> <a href="{% if stock.2 %}/dashselectown/{{ stock.0 }}{% else %}/dashselwatchlist/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></div>
+            {% endfor %}
+        </td>
+
+
+
+
+    </tr>
+</table>
+
+
+
+
+
+
+
+<!--<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tabs').tabs();     /* #wait for tabs to load*/
+    });
+</script>-->
+    {% endblock %}

@@ -1,0 +1,32 @@
+<!--enter own stock-->
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+
+
+<form method="post" action="{% url 'enterownstock' listid %}">
+
+    {% csrf_token %}
+
+    <h3>{{person}}</h3>
+
+
+    {{ form.as_p }}
+
+    {% if form.errors %}
+    <p style="color: red;">{{ form.errors }}</p>
+    {% endif %}
+    <p style="color: red;"> {{ error_message }}</p>
+
+    <input type="submit" name="newownstock" id="NewownStock" value="Create own stock">
+</form>
+
+
+    {% endblock %}
+

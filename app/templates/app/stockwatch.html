@@ -1,0 +1,39 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+
+<form method="post" action="{% url 'Stocks' %}">
+    {% csrf_token %}
+
+    Display form errors if any
+    {% if form.errors %}
+    <p style="color: red;">{{ form.errors }}</p>
+    {% endif %}
+
+    <!-- Render form fields -->
+    {{ form.as_p }}
+
+
+    <p>{{ error }}</p>
+
+
+    <p style="color: red;"> {{ error_message }}</p>
+
+    <!-- my_template.html -->
+    
+        <label for="my_dropdown">Select an option:</label>
+        <select id="my_dropdown" name="my_dropdown">
+            {% for item in data_for_dropdown %}
+            <option value="{{ item.id }}">{{ item.name }}</option>
+            {% endfor %}
+        </select>
+    
+
+
+    <input type="submit" name="createwatch" id="stockwatch" value="Create watch">
+</form>
+{% endblock %}
