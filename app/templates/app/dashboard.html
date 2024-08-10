@@ -5,34 +5,33 @@
 
 <h3 style="text-align:center;">{{ message }}</h3>
 
-
-
 <table align="center">
-    <tr>
-        <td> select the desired stock list
-        <td>
-    </tr>
     <tr>
         <td style="text-align:center;">
 
             <ul class="nav nav-tabs">
-                {{stock_list}}
-                <li> <a href="dashstock"> enter stock       </a></li>
-                <li> <a href="dashwatchlist">New Watch List </a></li>
-                <li> <a href="dashownlist"> New Owned List  </a></li>
+                <li> <a href="dashwatchlist"> <h3>New Watch List</h3> </a></li>
+                <li> <a href="dashownlist"> <h3> New Owned List</h3>  </a></li>
+                <li>
+                    <h1>Select a Score </h1>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Submit</button>
+                    </form>
+                </li>
             </ul>
         </td>
     </tr>
-  
-
     <tr>
-     
-        {% if form.errors %}
-        <p style="color: red;">{{ form.errors }}</p>
-        {% endif %}
+        <td>
+            {% if form.errors %}
+            <p style="color: red;">{{ form.errors }}</p>
+            {% endif %}
+            <!--include error message-->
+            {% include "app/errorpartial.html" %}
+        </td>
     </tr>
-
-
 </table>
 <table>
 
@@ -47,62 +46,61 @@
             See List
         </td>
         <td style="width:20%;">
-            add stock to list
-        </td>
-        <td style="width:20%;">
-            Edit List
-        </td>
+           edit stock list
         </td>
         <td style="width:20%;">
             Delete List
         </td>
     </tr>
-    <tr style="width:100%;">        <td style="width:20%;">
+    <tr style="width:100%;">
+        <td style="width:20%;">
             <!--show list names-->
             {% for stock in showstock %}
             <div style="text-align:center; color: {% if stock.2 %}blue{% else %}red{% endif %}">
-                <h3>{{ stock.1 }}</h3>
-            {% endfor %}
+                <h3>{{ stock.1 }}</h3>   <!--showstock = (stocklist_id, stock_symbols)-->
+                {% endfor %}
             </div>
         </td>
+        <!--see list-->
         <td style="width:20%;">
             {% for stock in showstock %}
-            <div><h3> <a href="{% if stock.2 %}/dashselectown/{{ stock.0 }}{% else %}/dashselwatchlist/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></h3</div>
+            <div><h3> <a href="{% if stock.2 %}/dashselectownlist/{{ stock.0 }}{% else %}/dashselwatchlist/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></h3></div>
             {% endfor %}
         </td>
-    <!--enter stock to list-->
+        <!--edit stock list-->
         <td style="width:20%;">
             {% for stock in showstock %}
-            <div> <a href="{% if stock.2 %}/enterownstock/{{ stock.0 }}{% else %}/enterwatchstock/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></div>
+            <div><h3> <a href="{% if stock.2 %}/enterownstock/{{ stock.0 }}{% else %}/enterwatchstock/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></h3></div>
             {% endfor %}
         </td>
+        <!--edit list-->
+        <!--<td style="width:20%;">
+            {% for stock in showstock %}
+            <div><h3><a href="{% if stock.2 %}/dasheditlist/{{ stock.0 }}{% else %}/dasheditlist/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></h3></div>
+            {% endfor %}
+        </td>-->
+        <!--delete list-->
         <td style="width:20%;">
             {% for stock in showstock %}
-            <div> <a href="{% if stock.2 %}/dashselectown/{{ stock.0 }}{% else %}/dashselwatchlist/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></div>
+            <div> <h3><a href="{% if stock.2 %}/dashdeletelist/{{ stock.0 }}{% else %}/dashdeletelist/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></h3></div>
             {% endfor %}
         </td>
-        <td style="width:20%;">
-            {% for stock in showstock %}
-            <div> <a href="{% if stock.2 %}/dashselectown/{{ stock.0 }}{% else %}/dashselwatchlist/{{ stock.0 }}{% endif %}">{{ stock.1 }}</a></div>
-            {% endfor %}
-        </td>
-
-
-
 
     </tr>
+    <tr>
+        <td><h3>list of your files</h3> </td>
+        <td> select file</td>
+        <td> delete file</td>
+    </tr>
+   
+    {% for filenames in fileshow %}
+    <tr>
+        <td><h4>{{ filenames.1 }}</h4></td> <!--filenames = (file_id, file_name)-->
+        <td><h4><a href="/seefilelist/{{ filenames.0 }}">{{ filenames.1 }}</a></h4></td>
+        <td><h4><a href="/deletefile/{{ filenames.0 }}">{{ filenames.1 }}</a></h4></td>
+    </tr>
+    {% endfor %}
 </table>
 
+ {% endblock %}
 
-
-
-
-
-
-<!--<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#tabs').tabs();     /* #wait for tabs to load*/
-    });
-</script>-->
-    {% endblock %}

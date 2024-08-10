@@ -6,6 +6,7 @@
     <RootNamespace>DjangoWebData2</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
     <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -33,9 +34,36 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\admin.py" />
+    <Compile Include="app\Pfolder\Bol.py" />
+    <Compile Include="app\Pfolder\BolBuy.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\Pfolder\Change.py" />
+    <Compile Include="app\Pfolder\Conditions.py" />
+    <Compile Include="app\Pfolder\Error.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\Pfolder\filter.py" />
+    <Compile Include="app\Pfolder\Finish.py" />
+    <Compile Include="app\Pfolder\GetBatchData.py" />
+    <Compile Include="app\Pfolder\GetFile.py" />
+    <Compile Include="app\Pfolder\GetUserFile.py" />
+    <Compile Include="app\Pfolder\ImportFiles.py" />
+    <Compile Include="app\Pfolder\Message.py" />
+    <Compile Include="app\Pfolder\Moneyflow.py" />
+    <Compile Include="app\Pfolder\Parse.py" />
+    <Compile Include="app\Pfolder\Process2.py" />
+    <Compile Include="app\Pfolder\SingleStock.py" />
+    <Compile Include="app\Pfolder\sort.py" />
+    <Compile Include="app\Pfolder\StockHandler.py" />
     <Compile Include="app\databasehelper.py" />
     <Compile Include="app\forms.py" />
+    <Compile Include="app\Pfolder\zzjunk.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\pythoxnf\GetBatchData.py" />
     <Compile Include="app\models.py" />
+    <Compile Include="app\pythoxnf\GetFile.py" />
     <Compile Include="app\tests.py" />
     <Compile Include="app\views.py" />
     <Compile Include="app\__init__.py" />
@@ -48,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
+    <Folder Include="app\uploads\" />
+    <Folder Include="app\Pfolder\" />
+    <Folder Include="app\Pfolder\__pycache__\" />
     <Folder Include="app\migrations\" />
     <Folder Include="app\static\" />
     <Folder Include="app\static\app\" />
@@ -56,13 +87,31 @@
     <Folder Include="app\static\app\scripts\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
+    <Folder Include="app\pythoxnf\" />
     <Folder Include="DjangoWebData2\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\Pfolder\__pycache__\Bol.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\Change.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\Conditions.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\filter.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\GetBatchData.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\Message.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\Moneyflow.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\Parse.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\PlotStk.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\Process2.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\StockHandler.cpython-311.pyc" />
+    <Content Include="app\Pfolder\__pycache__\tablecontrol.cpython-311.pyc" />
+    <Content Include="app\static\app\content\HerbStyle.css" />
+    <Content Include="app\static\app\scripts\myscripts.js" />
+    <Content Include="app\templates\app\chartpartial.html" />
+    <Content Include="app\templates\app\charttest.html" />
     <Content Include="app\templates\app\dashboard.html" />
     <Content Include="app\templates\app\dashownlist.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="app\templates\app\dashselwatchlist.html" />
     <Content Include="app\templates\app\dashwatchlist.html">
       <SubType>Code</SubType>
     </Content>
@@ -71,9 +120,16 @@
     <Content Include="app\templates\app\enterwatchstock.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="app\templates\app\Stocks.html" />
+    <Content Include="app\templates\app\errorpartial.html" />
+    <Content Include="app\templates\app\junk.html" />
+    <Content Include="app\templates\app\plotout.html" />
+    <Content Include="app\templates\app\plottest.html" />
     <Content Include="app\templates\app\stockwatch.html" />
     <Content Include="app\templates\app\dashselownlist.html" />
+    <Content Include="app\templates\app\dashDeletelist.html" />
+    <Content Include="app\templates\app\teststockpage.html" />
+    <Content Include="app\templates\app\outscore.html" />
+    <Content Include="app\templates\app\uploadfile.html" />
     <Content Include="requirements.txt" />
     <Content Include="DjangoWebData2\db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

@@ -1,0 +1,20 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+ <!--This inputs stocks to test the score and output results on outscore page-->
+
+<form method="post" action="{% url 'teststockpage' %}">
+    {% csrf_token %}
+    <!-- Render form fields -->
+    {{ form.as_p }}
+    <!--input stock symbol-->
+    <!--# myList.Count >= 2)   herb add test -->
+    <input type="submit" name="teststockscore" id="teststockscore" value="test stock">
+    {% if form.errors %}
+    <p style="color: red;">{{ form.errors }}</p>
+    {% endif %}
+</form>
+{% endblock %}

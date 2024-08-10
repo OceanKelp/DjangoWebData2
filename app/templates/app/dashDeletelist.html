@@ -1,0 +1,25 @@
+#delete list
+
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }} </h2>
+
+
+<h2>{{ message1 }} {{ list }}{{ message }}</h2>
+
+<form method="post" action="{% url 'dashdeletelist' %}">
+    {% csrf_token %}
+    <input type="submit" name="delete" id="delete" value="Delete List">
+</form>
+
+<form method="post" action="{% url 'dashboard' %}">
+    {% csrf_token %}
+    <input type="submit" name="nodelete" id="nodelete" value="do not Delete List">
+</form>
+
+
+<p style="color: red;"> {{ error_message }}</p>
+
+{% endblock %}

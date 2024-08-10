@@ -1,5 +1,4 @@
-
-#select own list 
+#select own list
 
 {% extends "app/layout.html" %}
 
@@ -7,33 +6,59 @@
 
 <h2>{{ title }}.</h2>
 
+<h3>{{username}}s owned list named {{list}}</h3>
+
+
+<h4>{{info|safe}}</h4>
+<h3>{{ scores|safe }}</h3>
+<h3> {{qty}}</h3>
+
+<p style="color: red;"> {{ error_message }}</p>
+
+{% csrf_token %}
+<meta name="csrf-token" content="{{ csrf_token }}">
+
+<table class="TD100L">
+    <tr class="TD70L">
+        <td class="TD100L">
+            <h3>  click for Chart </h3>
+        </td>
+    </tr>
+    <tr class="TD70L">
+        <td class="TD100L">
+            {{ message|safe }}
+        </td>
+    </tr>
+</table>
+<!--<h3> all of symbols in file {{ symbol|safe }}</h3>-->
 
 
 
-<h3>{{ message }}</h3>
+
+<table style="width:100%;">
+    <tr class="TR100">
+        <td class="TD20L"><h3 id="stock">  Chart of   {{stock}}</h3></td>
+        <td class="TD80L"><canvas id="ChartReal" width="130" height="100"></canvas></td>
+    </tr>
+</table>
+
+<p><h4> score {{ clickscore|safe  }}</h4></p>
+
+<!--must have canvas ChartReal in user html-->
+{% include 'app/chartpartial.html' with chart_data=chart_data %}
 
 
-<form method="post" action="{% url 'Stocks' %}">
-    {% csrf_token %}
 
 
-    <!-- Render form fields -->
-    <!--{{ form.as_p }}-->
-    <!-- Custom HTML form fields -->
-    <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-    </div>
-
-    <input type="submit" name="createStock" id="stock" value="Create stock">
-
-    Display form errors if any
-    {% if form.errors %}
-    <p style="color: red;">{{ form.errors }}</p>   validation errors
-    {% endif %}
-
-    <p style="color: red;"> {{ error_message }}</p>  <!-- custom error message-->
 
 
-</form>
+
+
+
+
+
+
+
+
 {% endblock %}
+

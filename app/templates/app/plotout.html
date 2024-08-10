@@ -1,0 +1,27 @@
+{% extends "app/layout.html" %}
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<!-- charts/templates/charts/chart.html -->
+<p> chart below</p>
+
+
+<div id="1" onclick="CallBack(1, 'BIO')" style="display: inline-block;">BIO </div>
+<div id="2" onclick="CallBack(2, 'C')" style="display: inline-block;">C </div>
+
+
+<script>
+
+
+
+    //callback when a symbol is clicked
+    function CallBack(index, symbol) {
+        window.open(`about`, '_blank', 'width=800,height=600');
+    }
+</script>
+{% endblock %}
+
+
+

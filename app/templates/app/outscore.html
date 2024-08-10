@@ -1,0 +1,47 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<style>
+    body {
+        padding-top: 80px; /* Adjust this value to match the height of your header */
+    }
+</style>
+
+
+<h3>outscore page is in use</h3>
+<h2>{{ title|safe }}.</h2>
+<table class="TD100L">
+    <tr class="TD70L"> 
+        <td class="TD100L" >
+            <h3>  click for Chart of </h3>
+            </td>
+        </tr>
+    <tr class="TD70L">
+        <td class="TD100L">
+            {{ message|safe }} 
+        </td>
+       </tr>
+</table><!--message is the click-->
+<table style="width:100%;">
+    <tr class="TR100">
+        <td class="TD20L"><h3 id="stock">  Chart of   {{stock}}</h3></td>
+    </tr>
+</table>
+
+
+
+
+<table style="width:100%;">
+    <tr class="TR100">
+        <!--<td class="TD20L"><h3 id="stock">  Chart of   {{stock}}</h3></td>-->
+        <td class="TD80L"><canvas id="ChartReal" width="130" height="100"></canvas></td>
+    </tr>
+</table>
+<h3> all of symbols in file {{ symbol|safe }}</h3>
+<p><h4> score {{ score|safe  }}</h4></p>
+
+<!--must have canvas ChartReal in user html-->
+{% include 'app/chartpartial.html' with chart_data=chart_data %}
+
+
+    {% endblock %}

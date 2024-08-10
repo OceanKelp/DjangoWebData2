@@ -1,0 +1,22 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+{% if form.errors %}
+<p style="color: red;"><h3 style="color: red;">{{ form.errors }} </h3></p>
+{% endif %}
+
+<p><h2>Files must be CSV type </h2></p>
+<p><h2> The symbol column header must be Symbol </h2></p>
+
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" name="FileForm" id="fileform">Submit</button>
+</form>
+
+{% endblock %}

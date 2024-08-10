@@ -1,0 +1,772 @@
+.adjustedZIndex {
+    z-index: 1;
+}
+
+.button {
+    border-bottom: 5px ridge ThreeDHighlight;
+    background-color: #aad5ff;
+    text-align: justify;
+    font-size: 12px;
+    color: Black;
+    font-weight: bold;
+    border-spacing: 5px;
+    height: 25px;
+    border-left-color: #aad5ff;
+    border-left-width: 5px;
+    border-right-color: #AAD5FF;
+    border-right-width: 5px;
+    border-top-color: ThreeDHighlight;
+    border-top-width: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+}
+
+.buttonbig {
+    background-color: #aad5ff;
+    border-color: ThreeDHighlight #aad5ff;
+    border-width: 5px;
+    text-align: justify;
+    font-size: 14px;
+    color: Black;
+    font-weight: bold;
+    border-spacing: 5px;
+    border-bottom-style: ridge;
+    margin: 3px;
+    height: 30px;
+}
+
+.checkboxNoSee {
+    background-color: red;
+    text-align: left;
+    font-size: 0px;
+    color: white;
+    font-weight: lighter;
+    margin: 6px;
+}
+
+.HR {
+    color: #aad5ff;
+    height: 10px;
+    width: 80%;
+    line-height: 10px;
+}
+
+.textbox {
+    text-align: left;
+    border-bottom: 2px ridge #0066FF;
+    background-color: #A4D1Ff;
+    text-align: left;
+    font-size: 12px;
+    color: Black;
+    font-weight: bold;
+    border-spacing: 10px;
+    height: 20px;
+    border-left-color: #0066FF;
+    border-left-width: 2px;
+    border-right-color: #0066FF;
+    border-right-width: 2px;
+    border-top-color: #0066FF;
+    border-top-width: 2px;
+}
+
+label {
+    width: 300pX;
+}
+
+.textboxmulti {
+    border-bottom: 2px ridge #0066FF;
+    background-color: #A4D1Ff;
+    text-align: justify;
+    font-size: 12px;
+    color: Black;
+    font-weight: bold;
+    border-spacing: 10px;
+    border-left-color: #0066FF;
+    border-left-width: 2px;
+    border-right-color: #0066FF;
+    border-right-width: 2px;
+    border-top-color: #0066FF;
+    border-top-width: 2px;
+}
+
+.DropDown {
+    border-bottom: 2px ridge #0066FF;
+    background-color: #A4D1Ff;
+    text-align: left;
+    font-size: 12px;
+    color: Black;
+    font-weight: bold;
+    border-spacing: 10px;
+    border-left-color: #0066FF;
+    border-left-width: 2px;
+    border-right-color: #0066FF;
+    border-right-width: 2px;
+    border-top-color: #0066FF;
+    border-top-width: 2px;
+    height: 20px;
+    width: 300px;
+}
+
+
+.TablePage {
+    border: 4px groove #0066FF;
+    width: 100%;
+}
+
+.Div100 {
+    width: 100%;
+}
+
+.tableMaster {
+    align-content: center;
+    border: 5px solid #0066FF;
+    padding: 3px;
+    margin: 3px;
+    width: 100%;
+    font-family: Verdana;
+    font-weight: bold;
+}
+
+.tableMasterNoBoarder {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-family: Verdana;
+    font-weight: bold;
+}
+
+
+.tableNoBorder {
+    width: 100%;
+    background-color: White;
+}
+
+
+.table50 {
+    width: 50%;
+    border: 4px ridge;
+    background-color: #C0C0C0;
+}
+
+.table25 {
+    width: 25%;
+    border: 4px ridge;
+    background-color: #C0C0C0;
+}
+
+.table25C {
+    width: 25%;
+    border: 4px ridge;
+    background-color: #C0C0C0;
+    align-self: center;
+}
+
+.TR100 {
+    width: 100%;
+    text-align: center;
+}
+
+
+.hrBlack {
+    color: Black;
+    text-align: center;
+    width: 300px;
+    height: 1px;
+}
+
+
+
+.TD25 {
+    width: 25%;
+    font-size: 14px;
+    font-family: Verdana;
+    color: #CC66FF;
+    text-align: center;
+}
+
+
+.TD250 {
+    width: 250px;
+    font-size: 14px;
+    font-family: Verdana;
+    color: #CC66FF;
+    text-align: center;
+}
+
+.TDDash {
+    width: 9%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.TDC {
+    text-align: center;
+}
+
+.TD5C {
+    width: 5%;
+    text-align: center;
+}
+
+.TD10L {
+    width: 10%;
+    text-align: left;
+}
+
+.TD10R {
+    width: 10%;
+    text-align: right;
+}
+
+.TD10C {
+    width: 10%;
+    text-align: center;
+}
+
+
+.TD15C {
+    width: 15%;
+    text-align: center;
+}
+
+.TD20C {
+    width: 20%;
+    text-align: center;
+}
+
+.TD20L {
+    width: 20%;
+    text-align: left;
+}
+
+.TD25L {
+    width: 25%;
+    text-align: left;
+}
+
+.TD20R {
+    width: 20%;
+    text-align: right;
+}
+
+
+.TD25L {
+    width: 25%;
+    text-align: left;
+}
+
+.TD25R {
+    width: 25%;
+    text-align: right;
+}
+
+.TD25C {
+    width: 25%;
+    text-align: center;
+}
+
+
+.TD30L {
+    width: 30%;
+    text-align: left;
+}
+
+.TD30R {
+    width: 30%;
+    text-align: right;
+}
+
+.TD30C {
+    width: 30%;
+    text-align: center;
+}
+
+.TD33L {
+    width: 33%;
+    text-align: left;
+}
+
+.TD33R {
+    width: 33%;
+    text-align: right;
+}
+
+.TD33C {
+    width: 33%;
+    text-align: center;
+}
+
+.TD40L {
+    width: 40%;
+    text-align: left;
+    align-content: center;
+}
+
+.TD40R {
+    width: 40%;
+    text-align: right;
+}
+
+.TD40C {
+    width: 40%;
+    text-align: center;
+    align-content: center;
+}
+
+.TD50L {
+    width: 50%;
+    text-align: left;
+}
+
+.TD50R {
+    width: 50%;
+    text-align: right;
+}
+
+.TD50C {
+    width: 50%;
+    text-align: center;
+}
+
+.TD60L {
+    width: 60%;
+    text-align: left;
+}
+
+.TD60R {
+    width: 60%;
+    text-align: right;
+}
+
+.TD60C {
+    width: 60%;
+    text-align: center;
+    align-content: center
+}
+
+.TD70C {
+    width: 60%;
+    text-align: center;
+}
+
+.TD70L {
+    width: 60%;
+    text-align: left;
+}
+
+
+.TD80L {
+    width: 80%;
+    text-align: left;
+}
+
+.TD80J {
+    width: 80%;
+    text-align: justify;
+}
+
+.TD80C {
+    width: 80%;
+    text-align: center;
+}
+
+.TD100C {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+.H1 {
+    font-family: verdana;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Black;
+}
+
+.H1RED {
+    font-family: verdana;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: RED;
+}
+
+.H2 {
+    font-family: verdana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    color: Black;
+}
+
+
+.H2L {
+    font-family: verdana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    color: Black;
+}
+
+.H2R {
+    font-family: verdana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    color: Black;
+}
+
+.H2C {
+    font-family: verdana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Black;
+}
+
+.H2I {
+    font-family: verdana;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    color: Black;
+}
+
+
+.H3L {
+    font-family: verdana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    color: Black;
+}
+
+.H4L {
+    font-family: verdana;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    color: Black;
+}
+
+.H2Red {
+    font-family: verdana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: RED;
+}
+
+.H2Blue {
+    font-family: verdana;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Blue;
+}
+
+.Mary {
+    font-family: verdana;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Black;
+}
+
+.H3NBL {
+    font-family: verdana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+    color: Black;
+    vertical-align: top;
+}
+
+.H3L {
+    font-family: verdana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    color: Black;
+}
+
+.H3R {
+    font-family: verdana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    color: Black;
+}
+
+.H3C {
+    font-family: verdana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Black;
+}
+
+.H3Red {
+    font-family: verdana;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Red;
+}
+
+.H4L {
+    font-family: verdana;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    color: Black;
+}
+
+.H4R {
+    font-family: verdana;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    color: Black;
+}
+
+.H4C {
+    font-family: verdana;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Black;
+}
+
+.H4E {
+    font-family: verdana;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: right;
+    color: Black;
+}
+
+.HError {
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+}
+
+.H4Red {
+    font-family: verdana;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Red;
+}
+
+
+.H5 {
+    font-family: verdana;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Black;
+}
+
+.H5C {
+    font-family: verdana;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Black;
+    text-align: center;
+}
+
+.H6C {
+    font-family: verdana;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: bold;
+    color: Black;
+    text-align: center;
+}
+
+.SpanC {
+    background-color: #aad5ff;
+    align-content: center;
+    font-family: verdana;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: Black;
+}
+
+
+
+.HeaderMiddle {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.HeaderRight {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: small;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.Right {
+    vertical-align: middle;
+    text-align: right;
+}
+
+.header {
+    margin-bottom: 1px;
+    color: #FFFFFF;
+    padding: 10px 10px 10px 10px;
+    border-bottom: 2px solid #7F7F7F;
+    border-right: 1px solid #7F7F7F;
+    height: 50px;
+    min-height: 50px;
+    vertical-align: top;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.NameLeft {
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.LabelDate {
+    font-family: Verdana;
+    color: #000000;
+    font-weight: bold;
+    font-size: 12px;
+    border: 2px ridge #0000FF;
+}
+
+.CalDayStyle {
+    font-size: 6pt;
+    border: 2px ridge #3649f5;
+    font-family: Verdana;
+    font-weight: bold;
+    background-color: #99CCFF;
+    font-style: normal;
+    color: #000000;
+}
+
+.CalDayStyle10 {
+    font-size: 10pt;
+    border: 2px ridge #3649f5;
+    font-family: Verdana;
+    font-weight: bold;
+    background-color: #99CCFF;
+    font-style: normal;
+    color: #000000;
+}
+
+.CalDayStyle8 {
+    font-size: 8pt;
+    border: 2px ridge #3649f5;
+    font-family: Verdana;
+    font-weight: bold;
+    background-color: #99CCFF;
+    font-style: normal;
+    color: #000000;
+}
+
+.CalWeekendDayStyle {
+    font-size: 6pt;
+    border: 2px ridge #3649f5;
+    font-family: Verdana;
+    font-weight: bold;
+    background-color: #66ccff;
+    font-style: normal;
+    color: #000000;
+}
+
+.CalSelectedDayStyle {
+    font-size: 6pt;
+    border: 2px ridge #3649f5;
+    font-family: Verdana;
+    font-weight: bold;
+    background-color: #66ffff;
+    color: #FFFFFF;
+}
+
+.CalTodayDayStyle {
+    font-size: 6pt;
+    border: 2px ridge #3649f5;
+    font-family: Verdana;
+    font-weight: bold;
+    background-color: #FFCC66;
+    color: White;
+}
+
+.CalSelectorStyle {
+    background-color: #00CC66;
+}
+
+.CalTitleStyle {
+    background-color: #3649f5;
+    font-weight: bold;
+    font-size: 14pt;
+    color: White;
+}
+
+.CalDayHeaderStyle {
+    background-color: #3649f5;
+    font-weight: bold;
+    font-size: 8pt;
+    color: White;
+}
+
+.CalOtherMonthDayStyle {
+    font-weight: normal;
+    font-size: 6pt;
+    background-color: #b9b9ff;
+}
+
+.CalNextPrevStyle {
+    font-size: 6pt;
+    color: White;
+    background-color: #3649f5;
+}
+
+.CalNextPrevStyleNoSee {
+    font-size: 1pt;
+    color: #3649f5;
+    background-color: #3649f5;
+}

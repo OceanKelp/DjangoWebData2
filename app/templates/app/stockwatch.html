@@ -6,7 +6,8 @@
 <h3>{{ message }}</h3>
 
 
-<form method="post" action="{% url 'Stocks' %}">
+
+<form method="post" action="{% url 'stockswatch' %}">
     {% csrf_token %}
 
     Display form errors if any
@@ -24,14 +25,14 @@
     <p style="color: red;"> {{ error_message }}</p>
 
     <!-- my_template.html -->
-    
-        <label for="my_dropdown">Select an option:</label>
-        <select id="my_dropdown" name="my_dropdown">
-            {% for item in data_for_dropdown %}
-            <option value="{{ item.id }}">{{ item.name }}</option>
-            {% endfor %}
-        </select>
-    
+
+    <label for="my_dropdown">Select an option:</label>
+    <select id="my_dropdown" name="my_dropdown">
+        {% for item in data_for_dropdown %}
+        <option value="{{ item.id }}">{{ item.name }}</option>
+        {% endfor %}
+    </select>
+
 
 
     <input type="submit" name="createwatch" id="stockwatch" value="Create watch">
