@@ -55,8 +55,8 @@ def contact(request):
         request,
         'app/contact.html',
         {
-            'title':'Contact',
-            'message':'Your contact page.',
+            'title':'MY nonContact',
+            'message':'as of yet i do not have an email',
             'year':datetime.now().year,
         }
     )
@@ -69,8 +69,8 @@ def about(request):
         request,
         'app/about.html',
         {
-            'title':'About',
-            'message':'Your application description page.',
+            'title':'About FUN',
+            'message':'Have fun while learn.',
             'year':datetime.now().year,
         }
     ) 
@@ -570,21 +570,21 @@ def plotrequest(request):
 
         
      
-def plottest(request):
-    assert isinstance(request, HttpRequest)
-    jd = get_value(request, 'BIO')
-  #  id = request.user.id  gets user id number
-     #id = request.user gets the user name
-    #jd = "data json"
-    assert isinstance(request, HttpRequest)
-    return render( request, 'app/plottest.html', 
-    {
+# def plottest(request):
+#     assert isinstance(request, HttpRequest)
+#     jd = get_value(request, 'BIO')
+#   #  id = request.user.id  gets user id number
+#      #id = request.user gets the user name
+#     #jd = "data json"
+#     assert isinstance(request, HttpRequest)
+#     return render( request, 'app/plottest.html', 
+#     {
         
-        'title':'testplot',
-        'message':'Your plot testing page.',
-        'year':datetime.now().year,
-        'error_message': 'error.',
-    })
+#         'title':'testplot',
+#         'message':'Your plot testing page.',
+#         'year':datetime.now().year,
+#         'error_message': 'error.',
+#     })
 
 def is_iterable(obj):
     try:

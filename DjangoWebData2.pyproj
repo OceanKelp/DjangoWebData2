@@ -123,13 +123,13 @@
     <Content Include="app\templates\app\errorpartial.html" />
     <Content Include="app\templates\app\junk.html" />
     <Content Include="app\templates\app\plotout.html" />
-    <Content Include="app\templates\app\plottest.html" />
     <Content Include="app\templates\app\stockwatch.html" />
     <Content Include="app\templates\app\dashselownlist.html" />
     <Content Include="app\templates\app\dashDeletelist.html" />
     <Content Include="app\templates\app\teststockpage.html" />
     <Content Include="app\templates\app\outscore.html" />
     <Content Include="app\templates\app\uploadfile.html" />
+    <Content Include="gitignore" />
     <Content Include="requirements.txt" />
     <Content Include="DjangoWebData2\db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
